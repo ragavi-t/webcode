@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-light bg-light d-flex align-items-center justify-content-between">
+      <div class="row px-sm-4 w-100">
+          <div class="logoCol col-lg-2 d-flex align-items-center p-0">
+              <div class="hamburger rounded-circle bg-light d-flex align-items-center justify-content-center p-sm-4">
+                  <i class="fa-solid fa-bars text-dark p-3 btn" onClick="hamburger()"></i>
+              </div>
+              <img src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png" class="" alt="Logo">
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+              <div class="input-group d-flex align-items-center justify-content-center">
+                  <div class="form-outline w-75" id="abdulRah">
+                    <input type="search" id="inpVal" class="form-control" placeholder="search" />
+                  </div>
+                  <button type="button" id="butn" onclick="valBut()" class="btn btn-light">
+                    <i class="fas fa-search" id="butClick"></i>
+                  </button>
+                  <button type="button" class="btn btn-light p-0">
+                      <i class="fa-solid fa-microphone"></i>    
+                  </button>
+                </div>
+          </div>
+          <div class="col-lg-2 d-flex align-items-center justify-content-around">
+              <button type="button" class="btn btn-light">
+                  <i class="fa-solid fa-upload"></i>
+                </button>
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-bell"></i>  
+                  </button> 
+                <div class="profile rounded-circle d-flex align-items-center justify-content-center text-light p-2">
+                  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" class="" alt="profile">
+                </div>
+          </div>
+      </div>
+    </nav>
+  
+  <!-- //container -->
+  
+    <div class="contain container-fluid">
+      <div class="row d-flex m-0 w-100">
+
+        <!-- firstColumn -->
+
+
+          <div class="col-lg-2">
+            <div class="menus d-flex p-2">
+              <button type="button" class="btn">
+                <i class="fa-solid fa-house"></i>
+              </button>
+              <button class="btn w-100">Home</button>
+            </div>
+              <div class="menus d-flex p-2">
+                <button type="button" class="btn">
+                  <i class="fa-brands fa-wpexplorer"></i>
+                </button>
+                <button class="btn w-100">Explore</button>
+              </div>
+              <div class="menus d-flex p-2">
+                <button type="button" class="btn">
+                  <i class="fa-solid fa-arrow-up-short-wide"></i>
+                </button>
+                <button class="btn w-100">Shorts</button>
+              </div>
+              <div class="menus d-flex p-2">
+                <button type="button" class="btn">
+                  <i class="fa-brands fa-youtube"></i>
+                </button>
+                <button class="btn w-100">Subscription</button>
+              </div>
+              <hr>
+              <div class="menus d-flex p-2">
+                <button type="button" class="btn">
+                  <i class="fa-solid fa-bookmark"></i>
+                </button>
+                <button class="btn w-100">Library</button>
+              </div>
+              <div class="menus d-flex p-2">
+                <button type="button" class="btn">
+                  <i class="fa-solid fa-clock-rotate-left"></i>
+                </button>
+                <button class="btn w-100">History</button>
+              </div>
+              <div class="menus d-flex p-2">
+                <button type="button" class="btn">
+                  <i class="fa-solid fa-video"></i>
+                </button>
+                <button class="btn w-100">Your Videos</button>
+              </div>
+              <div class="menus d-flex p-2">
+                <button type="button" class="btn">
+                  <i class="fa-solid fa-clock"></i>
+                </button>
+                <button class="btn w-100">Watch later</button>
+              </div>
+              <div class="menuPlay">
+                <div class="menus d-flex p-2" onclick="playlistDisplay()">
+                  <button type="button" class="btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button class="btn w-100" id="buton"></button>
+                </div>
+              </div>
+              <div class="menus d-flex p-2">
+                <button type="button" class="btn">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </button>
+                <button class="btn w-100">Liked Videos</button>
+              </div>
+          </div>
+
+          <!-- secondColumn -->
+
+          <div class="secCol col-lg-10">
+          <div class="filterRow m-0 d-flex align-items-center">
+              <button class="btn px-3 rounded ml-sm-1">All</button>
+              <button class="btn px-3 rounded ml-2">Mixed</button>
+              <button class="btn px-3 rounded ml-2">Music</button>
+              <button class="btn px-3 rounded ml-2">Ghosts</button>
+              <button class="btn px-3 rounded ml-2">TamilCinema</button>
+          <button class="btn px-3 ml-2">Live</button>
+              <button class="btn px-3 rounded ml-2">ComputerScience</button>
+              <button class="btn px-3 rounded ml-2">Eating</button>
+              <button class="btn px-3 rounded ml-2">Cricket</button>
+              <button class="btn px-3 rounded ml-2">MotorCycle</button>
+          </div>
+            <div class="videoRow row d-flex justify-content-between w-100">
+            </div>
+          </div>
+      </div>
+    </div> 
+
+    <!-- playlistCard -->
+   
+    <div class="playlistCard border primary px-3 py-3 mx-auto my-5">
+      <div class="row w-100 border secondary rounded m-0 p-0 bg-light">
+        <div class="col d-flex align-items-center justify-content-between">
+          <p class="m-0">Save</p>
+          <button class="btn">
+            <i class="fa-solid fa-xmark btn-light p-2" onclick="cancelAdd()"></i>
+          </button>
+        </div>
+      </div>
+      <div class="row w-100 border secondary rounded m-0 p-2 bg-light">
+        <div class="col d-flex align-items-center justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label pl-4" for="flexCheckDefault">
+              Watch Later
+            </label>
+        </div>
+      </div>
+    </div>
+    <div class="row w-100 border secondary rounded m-0 p-0 d-flex align-items-center justify-content-center bg-light">
+      <div class="col d-flex align-items-center justify-content-between">
+        <p class="m-0">Create</p>
+        <button class="btn">
+          <i class="fa-solid fa-plus btn-light p-2" onclick="createPlaylist()"></i>
+        </button>
+      </div>
+
+      <form class="formCreate" name="myForm">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Name</label>
+          <input type="text" class="form-control" name="nameInput" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2" class="mb-sm-2">Privacy</label>
+            <select id="privacyDetails" class="form-control p-2" id="exampleFormControlSelect1">
+              <option  value="">Select</option>
+              <option  value="TamilNadu">Private</option>
+              <option  value="Kerala">Public</option>
+              <option  value="Karnataka">Unlisted</option>
+            </select>
+        </div>
+        <input type="button" class="btn col-lg-12 btn-danger btn-md my-sm-2" value="SUBMIT" onclick="submitDisplay()"></input>
+      </form>
+
+    </div>
+    </div>
+</body>
+</html>

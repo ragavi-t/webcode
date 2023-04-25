@@ -1,0 +1,76 @@
+.hamburger{
+    width:10px;
+    height:10px;
+    background-color: #131212;
+}
+.logoCol img{
+    height:60px;
+    width:130px;
+    object-fit: cover;
+}
+.profile img{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.box{
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+}
+.box img{
+    width: 250px;
+    height:150px;
+    object-fit:cover;
+    border-radius: 15px;
+}
+.iconTitle img{
+    width:35px;
+    height:35px;
+    object-fit: cover;
+}
+.iconTitle {
+    gap:15px;
+}
+.iconTitle p{
+    font-size:11px;
+    font-weight: bold;
+}
+.channelTitle p{
+    font-size: 10px;
+    background-color: rgb(243, 243, 243);
+}
+.details{
+    height:100px;
+}
+.midCol{
+    display:none;
+    
+}   
+.roww{
+    width: 130px;
+
+}
+.playlistCard{
+    display: none;
+width:280px;
+}
+.formCreate{
+    display: none;
+}
+.playlistCard p {
+    font-weight:600;
+}
+.menuPlay{
+    display: none;
+
+    
+}
+.filterRow button{
+    background-color: #131212;
+    color:white;
+}
+.listPlay img{
+    width:120px;
+    height:80px;
+}
